@@ -20,7 +20,7 @@ header {
 }
 
 .search-input {
-  background-color: #f7f5db;
+  background-color: #dcf3a0;
   border: none;
   border-radius: 6px;
   width: 80%;
@@ -29,12 +29,57 @@ header {
 }
 
 .search-button {
-  background: #f8ee59;
-
+  background: #afee10;
   padding: 15px 30px;
   border: none;
   font-size: 16px;
   margin-left: 5px;
   border-radius: 6px;
   color: white;
+}
+
+main {
+  padding: 30px 0;
+}
+
+.weather-info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.city {
+  margin: 0;
+  font-size: 38px;
+  line-height: 48px;
+}
+
+.weather-details {
+  font-size: 16px;
+  color: rgba(39, 33, 66, 0.4);
+  line-height: 24px;
+  font-weight: 500;
+}
+
+.weather-details strong {
+  color: #afee10;
+}
+
+.weather-temp-container {
+  display: flex;
+}
+
+.weather-icon {
+  font-size: 42px;
+  margin-top: 44px;
+}
+
+.weather-temp {
+  font-size: 94px;
+  margin-left: 10px;
+  font-weight: bold;
+}
+
+.weather-unit {
+  margin-top: 29px;
+  font-size: 28px;
 }

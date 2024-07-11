@@ -1,0 +1,15 @@
+body {
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: 500px;
+  font-style: normal;
+  background-color: #f8ee59;
+}
+.whole-app {
+  background-color: white;
+  max-width: 650px;
+  margin: 30px auto;
+  padding: 20px;
+  border: 20px;
+  border-radius: 10;
+}

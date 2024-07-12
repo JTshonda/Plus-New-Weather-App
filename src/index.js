@@ -1,9 +1,9 @@
 function newCityWeather(response) {
+  let cityElement = document.querySelector("#current-city");
+  cityElement.innerHTML = response.data.city;
   let temperatureElement = document.querySelector("#temperature");
   let temperature = response.data.temperature.current;
   temperatureElement.innerHTML = Math.round(temperature);
-  let cityElement = document.querySelector("#current-city");
-  cityElement.innerHTML = response.data.city;
   let description = document.querySelector("#temp-description");
   description.innerHTML = response.data.condition.description;
   let humidity = document.querySelector("#humidity-level");
@@ -36,14 +36,18 @@ function formatDate(date) {
 
   return `${day} ${hours}:${minutes}`;
 }
-function searchCity(event) {
-  event.preventDefault();
-  let searchInput = document.querySelector("#search-input");
-  let city = searchInput.value;
+function searchCity(city) {
   let apiKey = "1d99d901f34da597o23a408fbateb9dc";
   let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}`;
   axios.get(apiUrl).then(newCityWeather);
 }
+function getCityInput(event) {
+  event.preventDefault();
+  let searchInput = document.querySelector("#search-input");
+
+  searchCity(searchInput.value);
+}
 
 let searchFormElement = document.querySelector("#search-form");
 searchFormElement.addEventListener("submit", searchCity);
+searchCity("Kinshasa");

@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -29,7 +30,7 @@
       <main>
         <div class="weather-info">
           <div>
-            <h1 class="city" id="input-city">Paris</h1>
+            <h1 class="city" id="current-city">Kinshasa</h1>
             <p class="weather-details">
               Tuesday 14:49, scattered clouds
               <br />
@@ -38,7 +39,7 @@
           </div>
           <div class="weather-temp-container">
             <div class="weather-icon">🌤️</div>
-            <div class="weather-temp">12</div>
+            <div class="weather-temp" id="temperature">12</div>
             <div class="weather-unit">°C</div>
           </div>
         </div>
